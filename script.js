@@ -1,16 +1,20 @@
 // complete the given function
 
-function palindrome(str){
-      var rev= "";
-	str=str.split(" ");
-	boolean ans=false;
-	for(let i=str.length()-1;i>=0;i--){
-		rev=rev+str.charAt(i);
-	}
-	if(str.equals(rev)){
-		return ans=true;
-	}
-	return ans;
+function isPalindrome(s) {
+  // Function to clean and format the input string
+  function cleanString(str) {
+    return str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  }
+
+  const cleanedString = cleanString(s);
+
+  // Compare the cleaned string with its reverse
+  const reversedString = cleanedString.split('').reverse().join('');
+
+  return cleanedString === reversedString;
 }
-palindrome(race a car);
-module.exports = palindrome
+
+// Example usage:
+const inputString = "race a car";
+const result = isPalindrome(inputString);
+console.log(result); // Output: false
