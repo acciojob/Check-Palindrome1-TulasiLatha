@@ -17,4 +17,4 @@ function isPalindrome(s) {
 // Example usage:
 const inputString = "race a car";
 const result = isPalindrome(inputString);
-console.log(result); // Output: false
+console.log(result); 
